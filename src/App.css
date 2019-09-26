@@ -1,22 +1,573 @@
-.App {
+@font-face {
+  font-family: 'AudiFont';
+  src: local('AudiFont'), url(./fonts/auditype-normal.woff) format('woff');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #8a8888;
+  --mainRed: #c23636;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
+body {
+  padding-top: 66px;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: AudiFont, Verdana, Geneva, Tahoma, sans-serif;
+  /* line-height: 1.4; */
+}
+
+/* end of globals */
+.container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}
+
+.wtf {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+}
+.wtf::after{
+  position: absolute;
+content:"";
+display: block;
+border: var(--mainGrey) 5px solid;
+width: 150%;
+height: 115%;
+left: 35%;
+top: -7%;
+z-index: -1;
+}
+.container-inner {
+  width: 50%;
+  height: 365px;
+  text-align: center;
+  /* border: 1px solid red; */
+  /* justify-content: center; */
+}
+.container-inner img {
+
+  height: auto;
+  max-height: 100%;
+  
+  /* text-align: center; */
+  /* border: 1px solid red; */
+  /* justify-content: center; */
+}
+.title-name {
+  font-size: 54px;
+  font-weight: bold;
+  color: var(--mainRed); 
+  padding: 3% 6% 0 0;
+  text-align: left;
+  /* justify-content: center; */
+}
+.title-description {
+  max-width: 199px;
+  font-size: 20px;
+  text-align: left;
+  /* font-weight: bold; */
+  color: var(--mainBlack); 
+  padding: 4% 6% 0 0;
+  /* justify-content: center; */
+}
+.lease-deatails {
+  max-width: 375px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: var(--mainBlack); 
+  padding: 2% 12% 0px 0px;
+  text-align: left;
+  /* justify-content: center; */
+}
+.lease-deatails-name {
+  max-width: 375px;
+  font-size: 15px;
+ 
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  color: var(--mainRed); 
+  padding-top: 4%;
+  text-align: left;
+  /* justify-content: center; */
+}
+.lease-deatails-price {
+  /* max-width: 330px; */
+  font-size: 54px;
+ 
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--mainBlack); 
+  padding-top: 1%;
+  text-align: left;
+  /* justify-content: center; */
+}
+.lease-details-string {
+  /* max-width: 330px; */
+  font-size: 12px;
+ 
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+  color: var(--darkGrey); 
+  padding-top: 1%;
+  text-align: left;
+  /* justify-content: center; */
+}
+.info1{
+  display: flex;
+  max-width: 69%;
+/* border: 1px solid #fff; */
+  /* font-size: 12px; */
+ 
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+  color: var(--darkGrey); 
+  border-top: var(--mainGrey) 1px solid; 
+  margin-top:5%;
+  padding-top:5%;
+  text-align: left;
+  /* justify-content: center; */
+}
+@media screen and (min-width: 2560px){
+  .info1{
+    margin-top:1%;
+    padding-top:1%;
+  }
+}
+@media screen and (max-width: 1122px){
+  .lease-deatails {
+    padding: 2% 5% 0px 0px;
+ 
+ }
+  .lease-deatails-name {
+    /* width: 50%; */
+    font-size: 12px;
+ 
+ }
+  .lease-deatails-price {
+    /* width: 50%; */
+    font-size: 33px;
+ 
+ }
+  .article {
+    /* width: 50%; */
+    padding: 3% 0;
+ 
+ }
+ .wtf::after{
+  
+    height: 100%;
+   
+   }
+  .lease-deatails-price-container {
+    /* width: 50%; */
+    font-size: 12px;
+ 
+ }
+ .title-description {
+  /* max-width: 199px; */
+  /* width: 50%; */
+  font-size: 16px;
+  text-align: left;
+  /* font-weight: bold; */
+  color: var(--mainBlack); 
+  padding: 4% 4% 0 3%;
+  /* justify-content: center; */
+}
+
+}
+@media screen and (max-width: 768px){
+  .container {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .container-inner {
+    width: 100%;
+    height: 365px;
+    text-align: center;
+    /* border: 1px solid red; */
+    /* justify-content: center; */
+  }
+  .wtf {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+  }
+  .wtf::after{
+     
+    width: 96%;
+    height: 196%;
+    left: 2%;
+    top:  0px;
+    z-index: -1;
+   }
+   .title{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+   .title-name {
+     /* width: 50%; */
+    font-size: 54px;
+    font-weight: bold;
+    color: var(--mainRed); 
+    padding: 3% 6% 0 0;
+    text-align: left;
+    /* justify-content: center; */
+  }
+  .title-description {
+    /* max-width: 199px; */
+    /* width: 50%; */
+    font-size: 20px;
+    text-align: left;
+    /* font-weight: bold; */
+    color: var(--mainBlack); 
+    padding: 4% 4% 0 3%;
+    /* justify-content: center; */
+  }
+  .lease-deatails {
+    /* max-width: 375px; */
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: var(--mainBlack); 
+    padding: 2% 6% 0px 7%;
+    text-align: left;
+    /* justify-content: center; */
+  }
+  .info1{
+
+    width: 100%;
+    /* font-size: 12px; */
+   
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    color: var(--darkGrey); 
+    border-top: var(--mainGrey) 1px solid; 
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:5%;
+    text-align: center;
+    /* justify-content: center; */
+  }
+  .lease-deatails-price {
+    max-width: 330px;
+    font-size: 44px;
+   
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--mainBlack); 
+    padding-top: 1%;
+    text-align: left;
+    /* justify-content: center; */
+  }
+}
+
+@media screen and (max-width: 425px){
+  .container {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .container-inner {
+    width: 100%;
+    height: 215px;
+    text-align: center;
+    /* border: 1px solid red; */
+    /* justify-content: center; */
+  }
+  .wtf {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+  }
+  .wtf::after{
+     
+    width: 96%;
+    height:260%;
+    left: 2%;
+    top:  27%;
+    z-index: -1;
+   }
+   .article {
+    /* width: 50%; */
+    padding: 30% 0;
+ 
+ }
+   .title{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+   .details{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+   }
+   .title-name {
+     width: 90%;
+    font-size: 40px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    color: var(--mainRed); 
+    padding: 3% 1% 0 4%;
+    text-align: left;
+    /* justify-content: center; */
+  }
+  .title-description {
+    /* max-width: 199px; */
+    /* width: 50%; */
+    font-size: 16px;
+    text-align: left;
+    /* font-weight: bold; */
+    color: var(--mainBlack); 
+    padding: 4% 4% 0 0;
+    /* justify-content: center; */
+  }
+  .lease-deatails {
+    /* max-width: 375px; */
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: var(--mainBlack); 
+    padding: 2% 6% 0px 7%;
+    text-align: left;
+    /* justify-content: center; */
+  }
+  .info1{
+
+    width: 100%;
+    /* font-size: 12px; */
+   
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    color: var(--darkGrey); 
+    border-top: var(--mainGrey) 1px solid; 
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:5%;
+    text-align: center;
+    /* justify-content: center; */
+  }
+  .lease-deatails-price {
+    max-width: 330px;
+    font-size: 44px;
+   
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--mainBlack); 
+    padding-top: 1%;
+    text-align: left;
+    /* justify-content: center; */
+  }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--offWhite);
+  z-index: 1;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 100px;
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+/* end of navbar */
+.leftSide-form-container{
+  max-width: 500px;
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-left: 12%;
+  min-height: 500px;
+}
+.notation{
+  margin: 0 auto;
+  text-align: justify;
+}
+.leftSide-inpt{
+  margin: 15px auto;
   text-align: center;
 }
+  .leftSide-inpt > input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 0 auto;
+   outline: none;
+   border: none;
+    border-radius: 14px;
+    background-color: var(--mainGrey);
+  }
+  .containerRad {
+    display: inline-block;
+    position: relative;
+    padding: 0 9%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+  }
 
-.App-logo {
-  height: 40vmin;
-}
+  .containerRad input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color:var(--mainRed);
+  }
+  
 
-.App-link {
-  color: #09d3ac;
-}
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .container .checkmark:after {
+     top: 22%;
+    left: 22%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  button {
+   width: 40%;
+    background-color: var(--mainBlack); 
+    border: none;
+    color:var(--mainWhite); 
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0 15% 0;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  .rightSide-form-container{
+    max-width: 900px;
+    width: 100%;
+    padding: 0 5% 0 5%;
+    /* border: 1px solid red; */
+    /* margin-left: 12%; */
+    background-color: var(--mainRed);
+    min-height: 500px;
+  }
+  .rightSide-form-title{
+    max-width: 900px;
+    text-align: center;
+    width: 100%;
+    padding-top: 10%;
+    /* margin-left: 12%; */
+    color: var(--mainWhite);
+    /* min-height: 500px; */
+  }
+  .select-rSide{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px auto;
+    text-align: center;
+   outline: none;
+   border: none;
+    border-radius: 14px;
+    background-color: var(--mainGrey);
+  }
+  
