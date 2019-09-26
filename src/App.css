@@ -73,7 +73,9 @@ z-index: -1;
   font-size: 54px;
   font-weight: bold;
   color: var(--mainRed); 
-  padding: 3% 6% 0 0;
+  /* padding: 3% 6% 0 0; */
+  margin-right: 8%;
+  margin-top: 3%;
   text-align: left;
   /* justify-content: center; */
 }
@@ -83,15 +85,18 @@ z-index: -1;
   text-align: left;
   /* font-weight: bold; */
   color: var(--mainBlack); 
-  padding: 4% 6% 0 0;
+  /* padding: 4% 6% 0 0; */
+  /* margin-right: 3%; */
+  margin-top: 4%;
   /* justify-content: center; */
 }
 .lease-deatails {
-  max-width: 375px;
+  /* max-width: 375px; */
   font-size: 20px;
   /* font-weight: bold; */
   color: var(--mainBlack); 
-  padding: 2% 12% 0px 0px;
+  /* padding: 2% 12% 0px 0px; */
+  margin-right: 5%;
   text-align: left;
   /* justify-content: center; */
 }
@@ -150,8 +155,9 @@ z-index: -1;
   }
 }
 @media screen and (max-width: 1122px){
+  
   .lease-deatails {
-    padding: 2% 5% 0px 0px;
+    /* padding: 2% 5% 0px 0px; */
  
  }
   .lease-deatails-name {
