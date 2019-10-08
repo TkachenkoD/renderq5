@@ -9,9 +9,9 @@ import './App.css';  //>>>
 function App() {
   return (
   <>
-    <Navbar></Navbar>
+    {/* <Navbar></Navbar> */}
     <Car></Car>
-    <GetData></GetData>
+    {/* <GetData></GetData> */}
   </>
   );
 }

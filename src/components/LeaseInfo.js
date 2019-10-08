@@ -13,12 +13,12 @@ export default function LeaseInfo(props) {
           {name}
         </p>
         <p className = "lease-deatails-price-container"> 
-       $<span className="lease-deatails-price"> {obj.price }</span> <span> {(obj.price_float != null)? (obj.price_float):"" }</span> Mo. Lease
+       $<span className="lease-deatails-price"> {obj.price }</span> <span> {(obj.price_float != null)? (obj.price_float):"" }</span> <span>Mo. Lease</span>
         </p>
 
         <p className = "lease-details-string">
           <span>{obj.due_at_signing} Due at Signing </span>
-          <span>{(obj.deposit != null)? (` | ${obj.deposit} Security Deposit `):""}</span>
+          <span  className="leaseString">{(obj.deposit != null)? (` | ${obj.deposit} Security Deposit `):""}</span>
 
         </p>
       </div>

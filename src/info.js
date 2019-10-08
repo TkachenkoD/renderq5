@@ -22,14 +22,14 @@ export const info = [
     {
       id: 2,
       title_name: "2018 Q8",
-      img: "./img/q8_2.jpeg",
+      img: "./img/q.png",
       name_descripton: "Audi Q8 5.0 TURBO",
       lease_info:{
         "everyone qualifies":{
           price: 800,
           price_float: 75,
           due_at_signing: "$3500",
-          deposit: "$0"
+          deposit: "$99"
         },
         "only for A8 owners":  {
           price: 700,
@@ -48,15 +48,15 @@ export const info = [
         "everyone qualifies":{
           price: 450,
           price_float: 15,
-          due_at_signing: "$3500",
+          due_at_signing: "$1950",
           deposit: "$0"
         },
         "only for BMW owners":  {
           price: 700,
-          due_at_signing: "$2100"
+          due_at_signing: "$1800"
         }
       },
       info1:
-        " MSRP: 64450. 10K mi/yr lease excludes tax title and plate free. For qualified customers though Audi Financial Services. Vehicle image shown for ilustrative purpose only #WC2776 Offer ends 09/03/19"
+        " MSRP: 25450. 10K mi/yr lease excludes tax title and plate free. For qualified customers though Audi Financial Services. Vehicle image shown for ilustrative purpose only #WC2776 Offer ends 09/03/19"
     }
   ];

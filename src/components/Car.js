@@ -6,20 +6,13 @@ export default class Car extends Component {
     info: info
   };
     render() {
-      const [as] = this.state.info;
+      const [elem1, elem2] = this.state.info;
+      console.log(elem2);
       return (
               <div >
                 {/* title */}
-  
-                <div>
-                  <div >
-                    <h1>{as.name}</h1>
-                  </div>
-                </div>
+                    {/* <h1>{elem1.title_name}</h1> */}
                {/* end title */}
-  
-             
-                  {/* product info */}
                 <div>
                   {info.map(nestedObj =>{
                     return(
